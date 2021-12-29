@@ -132,7 +132,7 @@ function build_host() {
         echo " build_host"
     else
         check_devtool
-        rm -rf boost_1_66_0.7z
+        #rm -rf boost_1_66_0.7z
         rm -rf ethminer
         echo "Download ethminer"
         git clone https://github.com/ethereum-mining/ethminer.git
