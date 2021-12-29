@@ -36,10 +36,12 @@ function build_ethash() {
     echo ""
     if [ ! $XILINX_XRT ]
     then
-        echo "Please setup XRT"
+	    echo "Please setup XRT"
+        echo "build _ethash"
     elif [ ! $XILINX_VITIS ]
     then
         echo "Please setup Vitis"
+		echo "build _ethash"
     else
         export DEVICE=u55n_gen3x4
         export TARGET=hw
@@ -57,9 +59,11 @@ function build_daggen() {
     if [ ! $XILINX_XRT ]
     then
         echo "Please setup XRT"
+		echo "build _daggen"
     elif [ ! $XILINX_VITIS ]
     then
         echo "Please setup Vitis"
+		echo "build _daggen"
     else
         export DEVICE=u55n_gen3x4
         export TARGET=hw
@@ -125,6 +129,7 @@ function build_host() {
     if [ ! $XILINX_XRT ]
     then
         echo "Please setup XRT"
+        echo " build_host"
     else
         check_devtool
         rm -rf boost_1_66_0.7z
