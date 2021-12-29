@@ -132,11 +132,11 @@ function build_host() {
         echo " build_host"
     else
         check_devtool
-        #rm -rf boost_1_66_0.7z
+        rm -rf boost_1_66_0.7z
         rm -rf ethminer
         echo "Download ethminer"
         git clone https://github.com/ethereum-mining/ethminer.git
-        #wget https://boostorg.jfrog.io/artifactory/main/release/1.66.0/source/boost_1_66_0.7z
+        wget https://boostorg.jfrog.io/artifactory/main/release/1.66.0/source/boost_1_66_0.7z
         mv boost_1_66_0.7z ~/.hunter/_Base/Download/Boost/1.66.0/075d0b4/
         cd ethminer
         git checkout -b xilinx_platform
